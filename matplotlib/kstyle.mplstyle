@@ -1,0 +1,124 @@
+##     - BACKENDS
+
+##     - LINES
+#lines.color:     C0 
+# lines.linewidth: 3
+# lines.markersize: 10
+
+##     - PATCHES
+
+##     - HATCHES
+
+##     - BOXPLOT
+
+##     - FONT
+
+##     - TEXT
+
+##     - LaTeX
+
+##     - AXES
+# axes.facecolor: w       # axes background color
+# axes.edgecolor: k       # axes edge color
+axes.linewidth: 1.5     # edge linewidth
+axes.grid: True   # display grid or not
+axes.grid.which: major
+axes.grid.axis: both
+axes.titlesize: 20   # fontsize of the axes title
+axes.titley: 1.0     # at the top, no autopositioning.
+axes.titlepad: 15.0     # pad between axes and title in points
+axes.titleweight: bold  # font weight for axes title
+axes.labelsize: 16  # fontsize of the x any y labels
+axes.labelpad: 8.0     # space between label and axis
+axes.labelweight: normal  # weight of the x and y labels
+axes.labelcolor: k
+axes.axisbelow: True   # whether axis gridlines and ticks are below
+                              # the axes elements (lines, text, etc)
+axes.xmargin: 0.1  # x margin.  See `axes.Axes.margins`
+axes.ymargin: 0.1  # y margin.  See `axes.Axes.margins`
+#axes.zmargin:   .05  # z margin.  See `axes.Axes.margins`
+axes.autolimit_mode: data  # If "data", use axes.xmargin and axes.ymargin as is.
+                            # If "round_numbers", after application of margins, axis
+                            # limits are further expanded to the nearest "round" number.
+axes.spines.bottom: True
+axes.spines.left: True
+axes.spines.right: True
+axes.spines.top: True
+# polaraxes.grid: True    # display grid on polar axes
+# axes3d.grid: True    # display grid on 3d axes
+
+##     - DATES
+
+##     - TICKS
+
+xtick.top: False   # draw ticks on the top side
+xtick.bottom: True   # draw ticks on the bottom side
+xtick.major.size: 4      # major tick size in points
+xtick.minor.size: 2      # minor tick size in points
+xtick.minor.visible: False
+xtick.major.width: 0.5    # major tick width in points
+xtick.minor.width: 0.5    # minor tick width in points
+xtick.major.pad: 4      # distance to major tick label in points
+xtick.minor.pad: 4      # distance to the minor tick label in points
+xtick.color: k      # color of the tick labels
+xtick.labelsize: 10 # fontsize of the tick labels
+xtick.direction: out     # direction: in, out, or inout
+xtick.major.top: True   # draw x axis top major ticks
+xtick.major.bottom: True   # draw x axis bottom major ticks
+xtick.minor.top: True   # draw x axis top minor ticks
+xtick.minor.bottom: True   # draw x axis bottom minor ticks
+xtick.alignment: center
+
+ytick.left: True   # draw ticks on the left side
+ytick.right: False   # draw ticks on the right side
+ytick.major.size: 4      # major tick size in points
+ytick.minor.size: 2      # minor tick size in points
+ytick.minor.visible: False
+ytick.major.width: 0.5    # major tick width in points
+ytick.minor.width: 0.5    # minor tick width in points
+ytick.major.pad: 4      # distance to major tick label in points
+ytick.minor.pad: 4      # distance to the minor tick label in points
+ytick.color: k      # color of the tick labels
+ytick.labelsize: 10 # fontsize of the tick labels
+ytick.direction: out     # direction: in, out, or inout
+ytick.major.left: True   # draw y axis left major ticks
+ytick.major.right: True   # draw y axis right major ticks
+ytick.minor.left: True   # draw y axis left minor ticks
+ytick.minor.right: True   # draw y axis right minor ticks
+ytick.alignment: center
+
+##     - GRIDS
+grid.color: k       # grid color
+grid.linestyle: :       # dotted
+grid.linewidth: 0.5     # in points
+grid.alpha: 0.7     # transparency, between 0.0 and 1.0
+
+##     - LEGEND
+
+##     - FIGURE
+
+##     - IMAGES
+
+##     - CONTOUR PLOTS
+
+##     - ERRORBAR PLOTS
+errorbar.capsize: 15
+
+##     - HISTOGRAM PLOTS
+
+## ***************************************************************************
+## * SCATTER PLOTS                                                           *
+## ***************************************************************************
+scatter.marker: s         # The default marker type for scatter plots.
+
+##     - AGG RENDERING
+
+##     - PATHS
+
+##     - SAVING FIGURES
+savefig.format: svg 
+savefig.dpi: 300
+
+##     - INTERACTIVE KEYMAPS
+
+##     - ANIMATION
