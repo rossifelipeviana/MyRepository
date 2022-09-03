@@ -1,3 +1,15 @@
+########################################################################
+## To use this, set on your code:
+## plt.style.use('/.../kstyle.mplstyle')
+########################################################################
+## List of params that be modified:
+## https://matplotlib.org/stable/tutorials/introductory/customizing.html
+## except this:
+## https://matplotlib.org/stable/api/style_api.html#matplotlib.style.use
+## Or, with matplotlib imported, type:
+## print(plt.rcParams)
+#########################################################################
+
 ##     - BACKENDS
 
 ##     - LINES
