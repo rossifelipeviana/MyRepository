@@ -1,9 +1,9 @@
-import shutil
-import os
-
 ###################################################################################
 # Pull files in a directory of my PC to that I upload that to GitHub/MyRepository.
 ###################################################################################
+
+import shutil
+import os
 
 
 def split_by_end_of_path(dir: str, position: int = None, wantfinal: str = True) -> str:
@@ -32,28 +32,29 @@ def copier(sources, destinations, reverse=False):
     """Copy a source of the file to your destiny
 
     Args:
-        sources (str): Path of source
-        destinations (str): Path of destination
-        reverse (bool, optional): Change source by destination and destination by source. Defaults to False.
+        sources (str): Path of source destinations (str): Path of destination
+        reverse (bool, optional): Change source by destination and destination
+        by source. Defaults to False.
     """
 
     for src, dst in zip(sources, destinations):
 
         # Verify that source folder exists
         os.makedirs(os.path.dirname(dst), exist_ok=True)
-        
+
         # Fix the slashes
         src.replace("\\", "/")
         src.replace("\\", "/")
 
         # Try to move the folder, if it doesn't print the error message
         try:
-            if not(reverse):
+            if not (reverse):
                 shutil.copy(src, dst)
             elif reverse:
                 shutil.copy(dst, src)
         except Exception as e:
             print(e)
+
 
 if __name__ == "__main__":
 
@@ -69,7 +70,6 @@ if __name__ == "__main__":
         r"E:\Programas\Python\MyRepository\docx\kstyle.py",
         r"E:\Programas\Python\MyRepository\Quimiometria\selenium\knavegator.py",
     ]
-
     dsts = [dir.replace("\\", "/") for dir in dsts]
 
-    copier(srcs, dsts, reverse = True)
+    copier(srcs, dsts, reverse=False)
