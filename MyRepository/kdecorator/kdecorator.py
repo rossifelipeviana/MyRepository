@@ -1,6 +1,6 @@
-# ############################################################################################################
-# Arquivo para mostrar a utilização de um decorador como forma de repetir uma funcionalidade para uma função.
-# ###########################################################################################################
+# ###########################################################################
+# Libraries of decorators.
+# ###########################################################################
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -12,8 +12,15 @@ from collections.abc import (
 )  # Adiciona funcionalidade para isinstance "iterável".
 
 
-def isseries(f):
-    """Check if 'f' is 1D colections or 1D unpacked values"""
+def do_have_1d(f):
+    """Check if 'f' is 1D colections or 1D unpacked values
+
+    Args:
+        f (function or sequence): The object the will be verified
+
+    Returns:
+        _type_: The own object functionalized or the proper sequence
+    """
 
     @wraps(f)
     def verificar(*args):
@@ -44,21 +51,3 @@ def isseries(f):
         return verificar
     else:
         return verificar(f)
-
-
-@isseries  # Este é o decorador, tente retirá-lo e verificar sua utilidade
-def somatorio(*args):
-    # Return the sum of all values 1D colections or 1D unpacked values
-    valores = args
-    s = 0
-    for n in valores:
-        s += n
-    return s
-
-
-lista = [1, 2, 3]
-
-somavalores = somatorio(1, 2, 3)
-somalista = somatorio(lista)
-print(somavalores)
-print(somalista)
