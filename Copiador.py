@@ -4,18 +4,20 @@
 
 from MyRepository.kos.kos import *
 
-srcs = [
-    r"E:\Programas\Python\Quimiometria\graph\kstyle.mplstyle",
-    r"E:\Programas\Python\Quimiometria\doc\kstyle.py",
-    r"E:\Programas\Python\Polícia Civil\PCNET_Navegator\knav\knavegator.py",
+my_pc = [
+    r'E:\Programas\Python\Quimiometria\kdecorator\kdecorator.py',
+    r'E:\Programas\Python\Quimiometria\kdocx\kstyle.py',
+    r'E:\Programas\Python\Quimiometria\kmatplotlib\kstyle.mplstyle',
+    r'E:\Programas\Python\Quimiometria\kstats\kstats.py',
 ]
-srcs = [dir for dir in srcs]
+my_pc = [dir for dir in my_pc]
 
-dsts = [
-    r"E:\Programas\Python\MyRepository\matplotlib\kstyle.mplstyle",
-    r"E:\Programas\Python\MyRepository\docx\kstyle.py",
-    r"E:\Programas\Python\MyRepository\Quimiometria\selenium\knavegator.py",
+my_git = [
+    r'E:\Programas\Python\MyRepository\MyRepository\kdecorator\kdecorator.py',
+    r'E:\Programas\Python\MyRepository\MyRepository\kdocx\kstyle.py',
+    r'E:\Programas\Python\MyRepository\MyRepository\kmatplotlib\kstyle.mplstyle',
+    r'E:\Programas\Python\MyRepository\MyRepository\kstats\kstats.py',
 ]
-dsts = [dir.replace("\\", "/") for dir in dsts]
+my_git = [dir.replace('\\', '/') for dir in my_git]
 
-copier(srcs, dsts, reverse=False)
+copier(my_pc, my_git, reverse=True)
