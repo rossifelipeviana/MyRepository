@@ -23,6 +23,14 @@ def copier(sources, destinations, reverse=False):
         src.replace("\\", "/")
         src.replace("\\", "/")
 
+        # Verify that be same files
+        if os.path.samefile(src, dst):
+            continue
+
+        try:
+            os.remove(dst)
+        except Exception as e:
+            print(e)
         # Try to move the folder, if it doesn't print the error message
         try:
             if not (reverse):
