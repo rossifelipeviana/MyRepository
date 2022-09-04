@@ -13,32 +13,38 @@ def copier(sources, destinations, reverse=False):
         reverse (iterable): Change source by destination and destination
         by source. Defaults to False.
     """
+    if reverse == True:
+        _ = sources
+        sources = destinations
+        destinations = _
 
     for src, dst in zip(sources, destinations):
 
-        # Verify that source folder exists
+        # Verify if that source folder exists.
         os.makedirs(os.path.dirname(dst), exist_ok=True)
 
         # Fix the slashes
         src.replace("\\", "/")
         src.replace("\\", "/")
 
-        # Verify that be same files
+        # Verify that be same files.
         if os.path.samefile(src, dst):
             continue
 
+        # Remove if this exist.
         try:
             os.remove(dst)
-        except Exception as e:
-            print(e)
-        # Try to move the folder, if it doesn't print the error message
+        except:
+            raise ValueError
+
+        # Try to move the folder, if it doesn't print the error message.
         try:
             if not (reverse):
                 shutil.copy(src, dst)
             elif reverse:
                 shutil.copy(dst, src)
         except Exception as e:
-            print(e)
+            raise ValueError
 
 
 def split_by_end_of_path(dir: str, position: int = None, wantfinal: str = True) -> str:
