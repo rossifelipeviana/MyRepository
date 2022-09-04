@@ -1,0 +1,7 @@
+#############################################
+# List of softwares to the global Python
+#############################################
+
+#pip install pip-autoremove
+
+
