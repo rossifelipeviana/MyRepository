@@ -19,7 +19,7 @@ def do_have_1d(f):
         f (function or sequence): The object the will be verified
 
     Returns:
-        _type_: The own object functionalized or the proper sequence
+        (function or sequence): The own object functionalized or the proper sequence
     """
 
     @wraps(f)
