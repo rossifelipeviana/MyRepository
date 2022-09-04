@@ -21,3 +21,4 @@ my_git = [
 my_git = [dir.replace('\\', '/') for dir in my_git]
 
 copier(my_pc, my_git, reverse=True)
+print('Well done')

@@ -28,26 +28,28 @@ def copier(sources, destinations, reverse=False):
         src.replace("\\", "/")
 
         # Verify that be same files.
-        if os.path.samefile(src, dst):
-            continue
+        try:
+            if os.path.samefile(src, dst):
+                continue
+        except FileNotFoundError:
+            pass
 
         # Remove if this exist.
         try:
             os.remove(dst)
-        except:
-            raise ValueError
+        except FileNotFoundError:
+            pass
 
         # Try to move the folder, if it doesn't print the error message.
         try:
-            if not (reverse):
-                shutil.copy(src, dst)
-            elif reverse:
-                shutil.copy(dst, src)
-        except Exception as e:
-            raise ValueError
+            shutil.copy(src, dst)
+        except:
+            raise
 
 
-def split_by_end_of_path(dir: str, position: int = None, wantfinal: str = True) -> str:
+def split_by_end_of_path(
+    dir: str, position: int = None, wantfinal: str = True
+) -> str:
     """I don't needed this function
     Split a directory by the file, take beginning or the end of directory
 
