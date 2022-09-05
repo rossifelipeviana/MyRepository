@@ -2,6 +2,10 @@
 # List of softwares to the global Python
 #############################################
 
-#pip install pip-autoremove
+pip install pip-autoremove
+pip install prospector
+pip install pip-audit
+
+GNU Make # https://www.youtube.com/watch?v=O3bs4JtHrow (2:13:20)
 
 
