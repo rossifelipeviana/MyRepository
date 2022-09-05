@@ -5,6 +5,7 @@
 pip install pip-autoremove
 pip install prospector
 pip install pip-audit
+pip install poetry
 
 GNU Make # https://www.youtube.com/watch?v=O3bs4JtHrow (2:13:20)
 
