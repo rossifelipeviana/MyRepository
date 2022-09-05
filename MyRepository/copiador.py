@@ -2,7 +2,7 @@
 # Pull files in a directory of my PC to that I upload that to GitHub/MyRepository.
 ###################################################################################
 
-from MyRepository.kos.kos import *
+from kos.kos import *
 
 my_pc = [
     r'E:\Programas\Python\Quimiometria\kdecorator\kdecorator.py',
