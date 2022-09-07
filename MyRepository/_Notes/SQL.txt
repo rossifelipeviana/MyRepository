@@ -75,5 +75,9 @@ FROM table 1 FULL OUTER JOIN table2 ON table1.column_X = table2.column_Y
 
 
 #
-# UNION
+# UNIONs
 #
+
+# UNION (with DISTINCT)
+
+# UNION ALL (without DISTINCT)
