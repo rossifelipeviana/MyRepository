@@ -1,0 +1,83 @@
+#
+# Basic Structure
+#
+
+SELECT *, COUNT(name) AS Quantidade de pessos por vizinhança (>2)
+FROM Customers
+WHERE Age>20 AND Age < 70
+ORDER BY Name, Age Desc
+GROUP BY Neighborhood
+HAVING COUNT(name)>2
+
+OR
+
+WITH
+good_age AS (SELECT * FROM Customers WHERE Age>20 AND Age < 70 
+
+SELECT *, COUNT(name) AS Quantidade de pessos por vizinhança (>2)
+FROM good_age
+ORDER BY Name, Age Desc
+GROUP BY Neighborhood
+HAVING COUNT(name)>2
+
+SELECT *, COUNT(name) AS Quantidade de pessos por vizinhança (>2)
+FROM Customers
+ORDER BY Name, Age Desc
+GROUP BY Neighborhood
+HAVING COUNT(name)>2
+
+#
+# OPARATORS
+#
+AND
+OR
+uf IN ('MG','SP','RJ')
+NOT IN
+
+
+#
+#Approximate filters
+#
+
+# Filters
+% - No-Holds Barred
+_ - Just one char
+[abc] - Something here described
+
+# Example
+WHERE Customers LIKE '%Silva%'
+
+#
+# Math functions
+#
+
+# Functions
+COUNT(), AVG(), MAX(), MIN(), STDEV(), SUM()
+
+# Params
+FUNCTION(column), FUNCTION(DISTINCT column), FUNCTION(*)
+
+
+#
+# JOIN
+#
+
+# Interception (JOIN or INNER JOIN)
+FROM table1 JOIN table2 ON table1.column_X = table2.column_Y
+			JOIN table3 ON table1.column_Z = table3.column_W
+
+# Add
+
+FROM table 1 LEFT JOIN table2 ON table1.column_X = table2.column_Y
+
+# FULL
+FROM table 1 FULL OUTER JOIN table2 ON table1.column_X = table2.column_Y
+
+
+#
+# UNIONs
+#
+
+# UNION (with DISTINCT)
+
+# UNION ALL (without DISTINCT)

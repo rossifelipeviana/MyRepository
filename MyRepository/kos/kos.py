@@ -3,6 +3,7 @@
 ###################################################################################
 import os
 import shutil
+import filecmp
 
 
 def copier(sources, destinations, reverse=False):
@@ -13,6 +14,8 @@ def copier(sources, destinations, reverse=False):
         reverse (iterable): Change source by destination and destination
         by source. Defaults to False.
     """
+    print('')
+    print('')
     if reverse == True:
         _ = sources
         sources = destinations
@@ -29,11 +32,22 @@ def copier(sources, destinations, reverse=False):
 
         # Verify that be same files.
         try:
-            if os.path.samefile(src, dst):
+            # if os.path.samefile(src, dst):
+            #     continue
+            if filecmp.cmp(src, dst):
+                print(f'{os.path.basename(src)} já estava atualizado.')
+                continue
+            else:
+                while True:
+                    continuar = input(
+                        f'Já existe um arquivo "{os.path.basename(src)}" na pasta de destino diferente do original, deseja realizar a substituição? '
+                    )
+                    if continuar in ('y', 'yes', 's', 'sim', 'n', 'nao', 'não', 'no'):
+                        break
+            if continuar == 'n':
                 continue
         except FileNotFoundError:
-            pass
-
+            raise
         # Remove if this exist.
         try:
             os.remove(dst)
@@ -47,9 +61,7 @@ def copier(sources, destinations, reverse=False):
             raise
 
 
-def split_by_end_of_path(
-    dir: str, position: int = None, wantfinal: str = True
-) -> str:
+def split_by_end_of_path(dir: str, position: int = None, wantfinal: str = True) -> str:
     """I don't needed this function
     Split a directory by the file, take beginning or the end of directory
 

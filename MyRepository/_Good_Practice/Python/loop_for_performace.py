@@ -1,23 +1,24 @@
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
+path = os.path.join(os.path.dirname(__file__), '../../')
+sys.path.append(path)
 from kdecorator import kdecorator
-
 
 @kdecorator.timeit
 def fun1():
     lista = [1] * 10000000
     for i in range(len(lista)):
-        a=i
+        a = i
     return a
+
 
 @kdecorator.timeit
 def fun2():
     lista = [1] * 10000000
     length = len(lista)
     for item in range(length):
-        a=item
+        a = item
     return a
 
 
@@ -25,7 +26,7 @@ def fun2():
 def fun3():
     lista = [1] * 10000000
     for item in lista:
-        a=item
+        a = item
     return a
 
 
