@@ -22,3 +22,7 @@ my_git = [dir.replace('\\', '/') for dir in my_git]
 
 copier(my_pc, my_git, reverse=False)
 print('Well done')
+
+
+# last copy:
+# 2022/08/07 - from PC to GIT
