@@ -1,4 +1,9 @@
-os.path.join(os.path.dirname(__file__), '../')
-sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
+# ######################################################################
+# If you need import a file in up a directory.
+# ######################################################################
 
-from kdecorator import kdecorator
+# Two up folder.
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../'))
+
+# One up folder.
+sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
