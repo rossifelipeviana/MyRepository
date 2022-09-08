@@ -14,7 +14,7 @@ Evaluation of performance and some suggestions of how somethings must be done (p
 Some annotation. Can be confused with _Examples.
 
 ### kdecorator
-Some decorator.
+Some decorators.
 
 ### kdocx
 Some structures for understand and/or automate the lib python-docx.
