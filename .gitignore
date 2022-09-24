@@ -1,6 +1,25 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,notepadpp
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,notepadpp
 
+
+
+# Meus ignorados
+MyRepository/Pi/pi.bp/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### NotepadPP ###
 # Notepad++ backups #
 *.bak
@@ -193,3 +212,4 @@ cython_debug/
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,notepadpp
+
