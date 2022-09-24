@@ -1,0 +1,204 @@
+#
+# A summary of Git and GitHub, its is messing and need be revised.
+#
+
+
+# Playlist:
+https://www.youtube.com/playlist?list=PLlAbYrWSYTiPA2iEiQ2PF_A9j__C4hi0A
+https://www.youtube.com/playlist?list=PLlAbYrWSYTiNqugqFFWWsgONJsmc3eMpg
+
+git remote prune origin --dry-run
+
+
+
+# Manipulação Git
+git status
+git remote -v
+
+git add -p (adicionar parcialmente algum texto)
+	y: yes
+	n: não
+	q: quit
+	a: all
+	j: next
+	g: back
+	s: dividir o texto
+	e: editar manualmente
+
+git checkout SomeBranch (Mudar para a branch designada)
+git checkout -b NewBranch (Criar um novo branch)
+git cherry-pick (Pega a cereja do bolo de algum branch sem a necessidade formal de unir)
+git checkout - (Volta para o branch anterior)
+
+git branch -D SomeBranch (apagar o branch)
+
+git mv <old name> <new name>
+
+git diff
+git diff --name-only
+
+git stash (Guarda os arquivos modificados)
+git stash list (lista os stashs)
+git stash apply (Restaura os arquivos do stash)
+git stash clear (Apaga o stash)
+
+## Correções
+git reset HEAD (Elimina os arquivos add)
+git --soft aa89s4df98a4sd9f8a4s8df6(Trás o commited de volta para staged)
+git --mixed aa89s4df98a4sd9f8a4s8df(Trás o commited de volta para modified)
+git --hard (Deleta o commimted e suas modificações)
+	O pode gerar uma divergência entre o remoto e o local, para corrigir deve-se utilizar o --force.
+git revert asadf6a5s4df654a65dfa4sf (Cria um novo commit revertendo para ao commit anterior ao último ajuste, recomendado para master)
+git reset --hard 1sa81fa1a517F2as8f42a1sa8d8 (Volta para o estado da hash na base do ódio)
+git reset --soft 84asd4AS4dA4asd84a9s8d4a8sd (Volta para o estado da hash antiga, mas acrescenta as mudanças para o staged)
+
+
+## Tags(Versões)
+git tag
+git tag -a 1.0.0.0 -m "first version" [-Annotation -Message](Criar uma tag)
+git push origin master --tags (Faz o pull da tag)
+git tag -d 1.0.0.0 (Apaga a tag)
+
+# Manipulação GitHub
+git branch --set-upstrem-to=origin/master branch (Define o branch padrão para o pull)
+git pull orgin/SomeBranch --rebase (Faz o rebase da Branch selecionada)
+git merge Branch (Quando a main for receber algo)
+git pull --rebase (Quando se quer igualar a feature à main, jogando suas modificações ao topo da pilha)
+git rebase Branch (Quando se quer igualar a feature à main)
+git push origin:1.0.0.0
+git push origin:SomeBranch
+git push <origin> --delete <branch>
+
+
+## Commit
+?commit amend (Realiza o commit mesclando ao commit anterior.)
+git commit --amend (Editar o último commid, útil/recomendado quando não se fez o push)
+
+## Set upstream
+git branch -d -r origin/HEAD (Deleta a branch upstream padrão do Git)
+git push -u origin master (Define a master como a upstream)
+
+
+# Vizualização de logs:
+*git reflog
+*git log --graph
+*git log --oneline --graph --all
+*git log
+*git log --decorate
+*git log --author="Felipe"
+*git shortlog
+*git shortlog -sn
+*git log --oneline
+*git show 1sa5ds541v15sa541sa5d1s2131v51asf15sa1f3a5
+
+#Export
+git archive master --format=zip --output=MeuBackup.zip
+
+# Config
+git branch -u branch origin/branch (since git 1.8 for branch command -u is a short form of --set-upstream-to)
+git config --global help.autocorrect 1 (Configura pra True o valor de autocorrect command)
+
+git config --global --replace-all alias.s status
+git config --global --replace-all alias.l log
+git config --global --replace-all alias.lo 'log --oneline'
+git config --global --replace-all alias.sl shortlog
+git config --global --replace-all alias.lg 'log --graph'
+git config --global --replace-all alias.c checkout# Playlist:
+https://www.youtube.com/playlist?list=PLlAbYrWSYTiPA2iEiQ2PF_A9j__C4hi0A 
+
+git remote prune origin --dry-run
+
+
+
+# Manipulação Git
+git status
+git remote -v
+
+git add -p (adicionar parcialmente algum texto)
+	y: yes
+	n: não
+	q: quit
+	a: all
+	j: next
+	g: back
+	s: dividir o texto
+	e: editar manualmente
+
+git checkout SomeBranch (Mudar para a branch designada)
+git checkout -b NewBranch (Criar um novo branch)
+git cherry-pick (Pega a cereja do bolo de algum branch sem a necessidade formal de unir)
+git checkout - (Volta para o branch anterior)
+
+git branch -D SomeBranch (apagar o branch)
+
+
+git diff
+git diff --name-only
+
+git stash (Guarda os arquivos modificados)
+git stash list (lista os stashs)
+git stash apply (Restaura os arquivos do stash)
+git stash clear (Apaga o stash)
+
+## Correções
+git reset HEAD (Elimina os arquivos add)
+git --soft aa89s4df98a4sd9f8a4s8df6(Trás o commited de volta para staged)
+git --mixed aa89s4df98a4sd9f8a4s8df(Trás o commited de volta para modified)
+git --hard (Deleta o commimted e suas modificações)
+	O pode gerar uma divergência entre o remoto e o local, para corrigir deve-se utilizar o --force.
+git revert asadf6a5s4df654a65dfa4sf (Cria um novo commit revertendo para ao commit anterior ao último ajuste, recomendado para master)
+git reset --hard 1sa81fa1a517F2as8f42a1sa8d8 (Volta para o estado da hash na base do ódio)
+git reset --soft 84asd4AS4dA4asd84a9s8d4a8sd (Volta para o estado da hash antiga, mas acrescenta as mudanças para o staged)
+
+
+## Tags(Versões)
+git tag
+git tag -a 1.0.0.0 -m "first version" [-Annotation -Message](Criar uma tag)
+git push origin master --tags (Faz o pull da tag)
+git tag -d 1.0.0.0 (Apaga a tag)
+
+# Manipulação GitHub
+git branch --set-upstrem-to=origin/master branch (Define o branch padrão para o pull)
+git pull orgin/SomeBranch --rebase (Faz o rebase da Branch selecionada)
+git merge Branch (Quando a main for receber algo)
+git pull --rebase (Quando se quer igualar a feature à main, jogando suas modificações ao topo da pilha)
+git rebase Branch (Quando se quer igualar a feature à main)
+git push origin:1.0.0.0
+git push origin:SomeBranch
+git push <origin> --delete <branch>
+
+
+## Commit
+?commit amend (Realiza o commit mesclando ao commit anterior.)
+git commit --amend (Editar o último commid, útil/recomendado quando não se fez o push)
+
+## Set upstream
+git branch -d -r origin/HEAD (Deleta a branch upstrem padrão do Git)
+git push -u origin master (Define a master como a upstream)
+
+
+# Vizualização de logs:
+*git reflog
+*git log --graph
+*git log --oneline --graph --all
+*git log
+*git log --decorate
+*git log --author="Felipe"
+*git shortlog
+*git shortlog -sn
+*git log --oneline
+*git show 1sa5ds541v15sa541sa5d1s2131v51asf15sa1f3a5
+
+#Export
+git archive master --format=zip --output=MeuBackup.zip
+
+# Config
+git branch -u branch origin/branch (since git 1.8 for branch command -u is a short form of --set-upstream-to)
+git config --global help.autocorrect 1 (Configura pra True o valor de autocorrect command)
+
+git config --global --replace-all alias.s status
+git config --global --replace-all alias.l log
+git config --global --replace-all alias.lo 'log --oneline'
+git config --global --replace-all alias.sl shortlog
+git config --global --replace-all alias.lg 'log --graph'
+git config --global --replace-all alias.c checkout
