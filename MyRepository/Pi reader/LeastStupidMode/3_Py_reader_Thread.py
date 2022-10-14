@@ -1,3 +1,14 @@
+'''
+The text (pi number) must be extracted using it: http://www.numberworld.org/y-cruncher/#Download
+
+Third attempt, here I attempt a smart (?) method, but slower.
+I open the file and get 1 letter and check the palindrome, but know I tried use threading.
+Maybe I should have taken a big piece and splitted it. But I didn't have time for it.
+
+Whit threading we have 10000 letter in 23 seconds.
+We spend more recourse checking if the thread is available than doing the function of palindrome check.
+'''
+
 import os
 import sympy
 import time
@@ -11,7 +22,7 @@ def check_palinprime(number):
     if stretch == stretch[::-1]:
         with open(f'Palindromos.txt', 'a') as reader:
             reader.write(f'O número {stretch} é um palíndromo.\n')
-        num = int(string)
+        num = int(stretch)
         # Check if number is prime.
         if sympy.isprime(num):
             # print(f'{num} é primo.')
@@ -49,7 +60,7 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
             if len(stretch) > 21:
                 stretch = stretch[1:]
             ##############################################################
-            # # Com thread (10000 em 23 segundos)
+            # # Com thread (10000 letter in 23 segundos)
             ##############################################################
             thread = threading.Thread(target=check_palinprime, args=(stretch,))
             thread.start()

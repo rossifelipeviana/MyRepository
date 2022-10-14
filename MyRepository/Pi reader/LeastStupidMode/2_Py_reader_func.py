@@ -1,3 +1,13 @@
+'''
+The text (pi number) must be extracted using it: http://www.numberworld.org/y-cruncher/#Download
+
+Second attempt, here I attempt a easy method, but slower.
+I open the file and get 1 letter and check the palindrome.
+Maybe I should have taken a big piece and splitted it. But I didn't have time for it.
+
+1000000 letter in 4 segundos.
+'''
+
 import os
 import sympy
 import time
@@ -8,11 +18,12 @@ def check_palinprime(number):
     # Check if palindrome.
     print(number)
     stretch = number
+    # Check if number is palindrome and save if it.
     if stretch == stretch[::-1]:
         with open(f'Palindromos.txt', 'a') as reader:
             reader.write(f'O número {stretch} é um palíndromo.\n')
-        num = int(string)
-        # Check if number is prime.
+        num = int(stretch)
+        # Check if number is prime and save if it.
         if sympy.isprime(num):
             # print(f'{num} é primo.')
             with open(f'Primos.txt', 'a') as reader:
@@ -50,6 +61,6 @@ with open(path, 'r') as texto:
         if len(stretch) > 21:
             stretch = stretch[1:]
         ##############################################################
-        # # Chamando função (1000000 em 4 segundos)
+        # # Chamando função (1000000 letter in 4 segundos)
         ##############################################################
         check_palinprime(stretch)
