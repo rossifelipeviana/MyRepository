@@ -1,7 +1,7 @@
-'''
-The initial intention was to create a standard to ".docx" files with pre-defined styles.
-It still needs to be implemented.
-'''
+#########################################################################################
+# The initial intention was to create a standard to ".docx" files with pre-defined styles.
+# It still needs to be implemented.
+#########################################################################################
 
 from docx import Document
 from docx.enum.style import WD_STYLE_TYPE
