@@ -37,7 +37,7 @@ def somadoquadradodasdiferencas():
 
 @kdecorator.do_have_1d
 def media_aritimetica(*args):
-    # (GUM2018, p. 10, eq. 3.)
+    # (GUM2008, p. 10, eq. 3.)
     valores = args
     m = 0
     n = len(valores)
@@ -59,7 +59,7 @@ def mediaharmonica(*args):
 
 @kdecorator.do_have_1d
 def variancia_experimental(*args):
-    # (GUM2018 p.10, eq. 4)
+    # (GUM2008 p.10, eq. 4)
     valores = args
     n = len(valores)
     mean = media_aritimetica(valores)
@@ -72,7 +72,7 @@ def variancia_experimental(*args):
 
 @kdecorator.do_have_1d
 def variancia_experimental_media(*args):
-    # (GUM2018, p. 10, eq. 5)
+    # (GUM2008, p. 10, eq. 5)
     valores = args
     n = len(valores)
     vem = variancia_experimental(valores) / n
@@ -81,6 +81,7 @@ def variancia_experimental_media(*args):
 
 # @kdecorator.lru_cache
 def SQTot(y, weight=None):
+    # Soma dos quadrados total (GUIA10, p. 11)
     if weight is None:
         weight = [1] * len(y)
     if kdecorator.do_have_1d(y):
@@ -94,6 +95,7 @@ def SQTot(y, weight=None):
 
 # @kdecorator.lru_cache
 def SQReg(y, predict, weight=None):
+    # Soma de quadrados da regressão (GUIA10, p. 11)
     if weight is None:
         weight = [1] * len(y)
     if kdecorator.do_have_1d(y) and kdecorator.do_have_1d(predict):
@@ -110,6 +112,7 @@ def SQReg(y, predict, weight=None):
 
 # @kdecorator.lru_cache
 def SQRes(y, predict, weight=None):
+    # Soma de quadrados devidos aos erros (ou resíduos) (GUIA10, p. 11)
     if weight is None:
         weight = [1] * len(y)
     if kdecorator.do_have_1d(y) and kdecorator.do_have_1d(predict):
@@ -125,6 +128,7 @@ def SQRes(y, predict, weight=None):
 
 # @kdecorator.lru_cache
 def QMTot(y, weight=None):
+    # Quadrado Médio Total (GUIA10, p. 11)
     if weight is None:
         weight = [1] * len(y)
     QMTot = SQTot(y, weight) / (len(y) - 1)
@@ -133,6 +137,7 @@ def QMTot(y, weight=None):
 
 # @kdecorator.lru_cache
 def QMReg(y, predict, weight=None):
+    # Quadrado Médio da Regressão (GUIA10, p. 11)
     if weight is None:
         weight = [1] * len(y)
     QMReg = SQReg(y, predict, weight) / (2 - 1)
@@ -141,6 +146,7 @@ def QMReg(y, predict, weight=None):
 
 # @kdecorator.lru_cache
 def QMRes(y, predict, weight=None):
+    # Quadrado Médio dos Resíduos (GUIA10, p. 11)
     if weight is None:
         weight = [1] * len(y)
     QMRes = SQRes(y, predict, weight) / (len(y) - 2)
