@@ -1,3 +1,7 @@
+'''
+A answer to a question a StackOverFlow about differents way to loop.
+'''
+
 import os
 import sys
 

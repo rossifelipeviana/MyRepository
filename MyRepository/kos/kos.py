@@ -7,7 +7,7 @@ import filecmp
 
 
 def copier(sources, destinations, reverse=False):
-    """Copy a list of files to your destiny
+    """Copy a list of files to your destiny.
 
     Args:
         sources (iterable): Path of source destinations (str): Path of destination
@@ -61,9 +61,9 @@ def copier(sources, destinations, reverse=False):
             raise
 
 
-def split_by_end_of_path(dir: str, position: int = None, wantfinal: str = True) -> str:
-    """I don't needed this function
-    Split a directory by the file, take beginning or the end of directory
+def split_path(path: str, position: int = None, wantfinal: str = True) -> str:
+    """
+    Split a directory by the positional slash that you want, take beginning or the end of directory
 
     Args:
         dir (str): Path on the filesystem to split
@@ -74,10 +74,13 @@ def split_by_end_of_path(dir: str, position: int = None, wantfinal: str = True) 
         str: The part of the path that you wanted splitted.
     """
 
-    dir = dir.split("\\")
-    n = len(dir)
-    dir = dir[n - position :] if wantfinal else dir[: n - position]
-    dir = "\\".join(dir)
-    dir = "\\" + dir if wantfinal else dir + "\\"
+    # Definitions
+    path = path.split("\\")
+    n = len(path)
 
-    return dir
+    # Split the path and take what u want.
+    path = path[n - position :] if wantfinal else path[: n - position]
+    path = "\\".join(path)
+    path = "\\" + path if wantfinal else path + "\\"
+
+    return path

@@ -2,10 +2,11 @@
 # List of softwares to the global Python
 #############################################
 
-pip install pip-autoremove
-pip install prospector
-pip install pip-audit
-pip install poetry
+pip install pip-autoremove           # Remove a package and its unused dependencies
+pip install prospector               # Analyse code and output information about errors, potential problems, convention violations and complexity.
+pip install pip-audit                # Scanning Python environments for packages with known vulnerabilities.
+pip install poetry                   # Python dependency management.
+pip install pipreqs                  # Generate requirements.txt.
 
 GNU Make # https://www.youtube.com/watch?v=O3bs4JtHrow (2:13:20)
 

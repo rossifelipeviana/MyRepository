@@ -1,6 +1,6 @@
-#
-# A summary of Git and GitHub, its is messing and need be revised.
-#
+'''
+A summary of Git and GitHub, its is messing and need be revised.
+'''
 
 
 # Playlist:
@@ -8,8 +8,6 @@ https://www.youtube.com/playlist?list=PLlAbYrWSYTiPA2iEiQ2PF_A9j__C4hi0A
 https://www.youtube.com/playlist?list=PLlAbYrWSYTiNqugqFFWWsgONJsmc3eMpg
 
 git remote prune origin --dry-run
-
-
 
 # Manipulação Git
 git status
