@@ -15,9 +15,11 @@ Example of some concepts.
 
 Evaluation of performance and some suggestions of how somethings must be done (pythonic).
 
-* Pandas: subtraction performance study.
+* Pandas:
+  *Subtraction performance study.
+
 * Python:  
-  * Check if thing is iterable.
+  * Check if a thing is iterable.
   * Check loop perfomace.
 
 ### _Notes
@@ -71,3 +73,7 @@ Some structures of statistic to my elucidation of conceptios and automations of 
 * Quadrado Médio Total
 * Quadrado Médio da Regressão
 * Quadrado Médio dos Resíduos
+
+# Extra
+Resultados de linearidade para RDC 166/17, que estabelece critérios para a Validação de Métodos Analíticos.  
+https://rdc166-17-linearidade.herokuapp.com/
