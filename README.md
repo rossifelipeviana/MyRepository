@@ -10,9 +10,10 @@ Example of some concepts.
 
 ### _Good_Practice
 Evaluation of performance and some suggestions of how somethings must be done (pythonic).
-* Pandas: subtraction performance study.
+* Pandas:
+  *Subtraction performance study.
 * Python:  
-  * Check if thing is iterable.
+  * Check if a thing is iterable.
   * Check loop perfomace.
 
 ### _Notes
