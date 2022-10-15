@@ -74,6 +74,10 @@ Some structures of statistic to my elucidation of conceptios and automations of 
 * Quadrado Médio da Regressão
 * Quadrado Médio dos Resíduos
 
+### ktext
+
+* Count words in pdf file
+
 # Extra
 Resultados de linearidade para RDC 166/17, que estabelece critérios para a Validação de Métodos Analíticos.  
 https://rdc166-17-linearidade.herokuapp.com/
